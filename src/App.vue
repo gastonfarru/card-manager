@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-x-hidden">
     <!-- Landing Page -->
     <LandingPage v-if="!isAuthenticated" @show-login="showLogin = true" @direct-login="login" />
 
@@ -11,7 +11,7 @@
       @click.self="showLogin = false"
     >
       <div
-        class="bg-white w-full max-w-md mx-auto transform transition-all duration-300"
+        class="bg-white w-full max-w-sm sm:max-w-md mx-auto transform transition-all duration-300"
         style="
           border-radius: 24px;
           box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
@@ -24,7 +24,7 @@
         <div
           style="
             background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            padding: 2rem;
+            padding: clamp(1rem, 5vw, 2rem);
             position: relative;
             overflow: hidden;
           "
@@ -52,7 +52,7 @@
               align-items: flex-start;
             "
           >
-            <div>
+            <div class="overflow-x-hidden">
               <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px">
                 <div
                   style="
@@ -68,7 +68,7 @@
                 >
                   <CreditCard style="width: 24px; height: 24px; color: white" />
                 </div>
-                <div>
+                <div class="overflow-x-hidden">
                   <h2 style="font-size: 24px; font-weight: 900; color: white; margin: 0">
                     Bienvenido
                   </h2>
@@ -101,7 +101,7 @@
         <!-- Contenido del Modal -->
         <div style="padding: 2rem">
           <form @submit.prevent="login" style="display: flex; flex-direction: column; gap: 1.5rem">
-            <div>
+            <div class="overflow-x-hidden">
               <label
                 style="
                   display: block;
@@ -150,7 +150,7 @@
               </div>
             </div>
 
-            <div>
+            <div class="overflow-x-hidden">
               <label
                 style="
                   display: block;
@@ -357,7 +357,7 @@
             <div class="grid md:grid-cols-4 gap-6 mb-8">
               <div class="stat-card bg-white rounded-lg shadow-sm p-6">
                 <div class="flex items-center justify-between">
-                  <div>
+                  <div class="overflow-x-hidden">
                     <p class="text-sm text-gray-600">Presupuesto Total</p>
                     <p class="text-2xl font-bold text-gray-900">
                       {{ formatCurrency(mockData.company.totalBudget) }}
@@ -372,7 +372,7 @@
               </div>
               <div class="stat-card bg-white rounded-lg shadow-sm p-6">
                 <div class="flex items-center justify-between">
-                  <div>
+                  <div class="overflow-x-hidden">
                     <p class="text-sm text-gray-600">Gastado</p>
                     <p class="text-2xl font-bold text-green-600">
                       {{ formatCurrency(mockData.company.usedBudget) }}
@@ -387,7 +387,7 @@
               </div>
               <div class="stat-card bg-white rounded-lg shadow-sm p-6">
                 <div class="flex items-center justify-between">
-                  <div>
+                  <div class="overflow-x-hidden">
                     <p class="text-sm text-gray-600">Tarjetas Activas</p>
                     <p class="text-2xl font-bold text-gray-900">{{ activeCards }}</p>
                   </div>
@@ -400,7 +400,7 @@
               </div>
               <div class="stat-card bg-white rounded-lg shadow-sm p-6">
                 <div class="flex items-center justify-between">
-                  <div>
+                  <div class="overflow-x-hidden">
                     <p class="text-sm text-gray-600">Pendientes</p>
                     <p class="text-2xl font-bold text-orange-600">{{ pendingTransactions }}</p>
                   </div>
@@ -433,7 +433,7 @@
                       >
                         <CreditCard class="w-5 h-5 text-gray-600" />
                       </div>
-                      <div>
+                      <div class="overflow-x-hidden">
                         <p class="merchant-name font-medium text-gray-900">
                           {{ transaction.merchant }}
                         </p>

@@ -44,6 +44,7 @@
     "tailwindcss": "^4.1.11",
     "typescript": "~5.8.0",
     "vite": "npm:rolldown-vite@latest",
+    "vite-plugin-pages": "^0.33.1",
     "vite-plugin-vue-devtools": "^8.0.0",
     "vue-tsc": "^3.0.4"
   }

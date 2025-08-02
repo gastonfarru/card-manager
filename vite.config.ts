@@ -3,7 +3,5 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  resolve: {
-    extensions: ['.js', '.ts', '.vue'],
-  },
+  base: '/card-manager/', // Cambia 'card-manager' por el nombre de tu repo
 })
